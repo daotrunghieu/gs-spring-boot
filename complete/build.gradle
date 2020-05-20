@@ -22,6 +22,16 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	// end::tests[]
+
+	implementation("io.prometheus:simpleclient:$promVer")
+	implementation("io.prometheus:simpleclient_common:$promVer")
+	implementation("io.prometheus:simpleclient_dropwizard:$promVer")
+	implementation("io.prometheus:simpleclient_servlet:$promVer")
+
+	compile ("io.prometheus:simpleclient_spring_boot:$promVer")
+	compile ("io.prometheus:simpleclient_servlet:$promVer")
+	compile ("io.prometheus:simpleclient_hotspot:$promVer")
+	compile ("io.prometheus:simpleclient_dropwizard:$promVer")
 }
 
 test {
